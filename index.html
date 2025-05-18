@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绘图变音频</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>绘图变音频</h1>
+
+    <div class="controls">
+        <label for="instrumentChoice">选择乐器:</label>
+        <select id="instrumentChoice">
+            <option value="oscillator">基础波形 (默认)</option>
+            <option value="musicBox">八音盒</option>
+            <option value="organ">管风琴 (简化)</option>
+            <option value="piano">钢琴 (采样占位)</option>
+        </select>
+        <label for="colorPicker">选择颜色:</label>
+        <input type="color" id="colorPicker" value="#000000">
+        <label for="lineWidth">画笔粗细:</label>
+        <input type="range" id="lineWidth" min="1" max="20" value="5">
+        <button id="clearCanvas">清空画布</button>
+    </div>
+
+    <canvas id="drawingCanvas"></canvas>
+
+    <div class="output-controls">
+        <button id="playSoundButton">播放声音</button>
+        <p><i>提示: 声音会根据您绘图的颜色、Y轴位置和X轴顺序生成。</i></p>
+        <div id="instrumentDescription">
+            <p>基础波形: 红: 方波, 蓝: 锯齿波, 绿: 三角波, 其他: 正弦波</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
