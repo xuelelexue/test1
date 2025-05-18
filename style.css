@@ -1,16 +1,80 @@
-/* ... (previous CSS code) ... */
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    color: #333;
+}
 
-.controls select {
-    padding: 8px;
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.controls {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* 允许控件换行 */
+    gap: 10px; /* 控件之间的间隙 */
+}
+
+.controls label,
+.controls input,
+.controls button {
+    margin-right: 5px; /* 调整右边距 */
+}
+
+#drawingCanvas {
+    border: 2px solid #333;
+    background-color: #fff;
+    cursor: crosshair;
+    touch-action: none; /* 禁用触摸滚动等默认行为 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.output-controls {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.output-controls p {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 18px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #004085;
+}
+
+input[type="color"] {
+    width: 40px;
+    height: 40px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
     border-radius: 4px;
-    border: 1px solid #ccc;
-    margin-right: 10px; /* Added margin */
 }
 
-#instrumentDescription p {
-    font-size: 0.85em;
-    color: #666;
-    margin-top: 5px;
+input[type="range"] {
+    cursor: pointer;
 }
-
-/* ... (rest of CSS code) ... */
